@@ -1,33 +1,18 @@
-<BODY>
+#page 1;
 
-<!-- this script got from www.javascriptfreecode.com coded by: Krishna Eydatoula-->
-<SCRIPT LANGUAGE="JavaScript">
+// Create three variables to store the information needed.
+var price;
+var quantity;
+var total;
 
-	<!-- Begin
-	// If it's Internet Explorer, use automatic link
-	// Be sure to change the "http://www.YourWebSiteHere.com\"
-	// to the URL you want them to bookmark.
-	if (document.all){
-	  document.write('<A HREF="javascript:history.go(0);" onClick="this.style.behavior=\'url(#default#homepage)\';this.setHomePage(\'http://www.YourWebSiteHere.com\');">');
-	  document.write('<font size="5" color=6699FF face=arial><B>Click Here to Make My Web Page Your Homepage</B></font></a>');
-	}
+// Assign values to the price and quantity variables.
+price = 5;
+quantity = 14;
+// Calculate the total by multiplying the price by quantity.
+total = price * quantity;
 
-	// If it's Netscape 6, tell user to drag link onto Home button
-	// Be sure to change the "http://www.YourWebSiteHere.com\"
-	// to the URL you want them to bookmark.
-	else if (document.getElementById){
-	  document.write('<a href="http://www.YourWebSiteHere.com">Drag this link onto your Home button to make this your Home Page.</a>');
-	}
+// Get the element with an id of cost.
+var el = document.getElementById('cost');
+el.textContent = '$' + total;
 
-	// If it's Netscape 4 or lower, give instructions to set Home Page
-	else if (document.layers){
-	  document.write('<b>Make this site your home page:</b><br>- Go to <b>Preferences</b> in the <B>Edit</B> Menu.<br>- Choose <b>Navigator</b> from the list on the left.<br>- Click on the <b>"Use Current Page"</b> button.');
-	}
-
-	// If it's any other browser, for which I don't know the specifications of home paging, display instructions
-	else {
-	  document.write('<b>Make this site your home page:</b><br>- Go to <b>Preferences</b> in the <B>Edit</B> Menu.<br>- Choose <b>Navigator</b> from the list on the left.<br>- Click on the <b>"Use Current Page"</b> button.');
-	}
-	//  End -->
-</script>
-
+// Note: textContent does not work in IE8 or earlier - see explanation on website
